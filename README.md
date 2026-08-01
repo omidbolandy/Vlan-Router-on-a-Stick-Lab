@@ -14,6 +14,12 @@ The concept of a Virtual Local Area Network (VLAN) is used to logically separate
 
 ---
 
+## 🖼️ Network Topology
+
+![VLAN & Router-on-a-Stick Topology](./vlan.png)
+
+---
+
 ## 📚 1. Core Concepts
 
 - **Broadcast Domain Isolation:** Each VLAN creates a separate broadcast domain — broadcast traffic from one VLAN never leaks into another.
@@ -73,11 +79,12 @@ S1(config)# interface GigabitEthernet 0/1
 S1(config-if)# switchport mode trunk
 S1(config-if)# end
 S1# write memory
+```
 
 ---
 
 ## 🚀 5. Router Configuration (Router-on-a-Stick)
-
+```
 ! Enable Physical Interface
 R1# configure terminal
 R1(config)# interface GigabitEthernet 0/0
@@ -96,22 +103,23 @@ R1(config-subif)# encapsulation dot1Q 20
 R1(config-subif)# ip address 192.168.20.1 255.255.255.0
 R1(config-subif)# end
 R1# write memory
+```
 
 ---
 
 ## 🔍 6. Verification & Troubleshooting Commands
 
 1. Verify VLAN Assignment on Switch:
-S1# show vlan brief
+```S1# show vlan brief```
 
 2. Verify Trunk Link Status:
-S1# show interfaces trunk
+```S1# show interfaces trunk```
 
 3. Check Active Connected Routes on Router:
-R1# show ip route
+```R1# show ip route```
 
 4. End-to-End Connectivity Ping Test:
-PC-1> ping 192.168.20.10
+```PC-1> ping 192.168.20.10```
 
 ---
 
@@ -134,4 +142,3 @@ This scenario demonstrates the foundational principles of Inter-VLAN Routing usi
 🔗 Live Portfolio Demo: Coming soon
 
 📄 License: MIT License — © 2026 obkWorks
-```
