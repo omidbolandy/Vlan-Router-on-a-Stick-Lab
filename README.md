@@ -16,7 +16,9 @@ The concept of a Virtual Local Area Network (VLAN) is used to logically separate
 
 ## 🖼️ Network Topology
 
-![VLAN & Router-on-a-Stick Topology](./vlan.png)
+<p align="center">
+  <img src="./vlan.png" alt="VLAN & Router-on-a-Stick Topology" width="800">
+</p>
 
 ---
 
